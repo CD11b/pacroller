@@ -5,7 +5,7 @@ from typing import List
 import logging
 import urllib.request, urllib.parse
 from platform import node
-from pacroller.config import NETWORK_RETRY, SMTP_ENABLED, SMTP_SSL, SMTP_HOST, SMTP_PORT, SMTP_FROM, SMTP_TO, SMTP_AUTH, TG_ENABLED, TG_BOT_TOKEN, TG_API_HOST, TG_RECIPIENT, GOTIFY_ENABLED, GOTIFY_TOKEN, GOTIFY_HOST, DEF_HTTP_HDRS
+from pacroller.config import NETWORK_RETRY, SMTP_ENABLED, SMTP_SSL, SMTP_HOST, SMTP_PORT, SMTP_FROM, SMTP_TO, SMTP_AUTH, TG_ENABLED, TG_BOT_TOKEN, TG_API_HOST, TG_RECIPIENT, GOTIFY_ENABLED, GOTIFY_TOKEN, GOTIFY_HOST, GOTIFY_PRIORITY, DEF_HTTP_HDRS
 
 logger = logging.getLogger()
 hostname = node() or "unknown-host"
