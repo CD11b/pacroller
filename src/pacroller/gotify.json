@@ -1,0 +1,5 @@
+{
+    "enabled": false,
+    "host_url": "gotify.example.com",
+    "token": "123456789"
+}
