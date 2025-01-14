@@ -68,10 +68,6 @@ def send_gotify_message(text: str, subject: str) -> bool:
             data = json.dumps({"message": f"{text[:4000]}", "title": f"{subject}", "priority": GOTIFY_PRIORITY})
             req = urllib.request.Request(url, data=data.encode('utf-8'), headers={**DEF_HTTP_HDRS, **headers})
             resp = urllib.request.urlopen(req).read().decode('utf-8')
-            content = json.loads(resp)
-            if not content.get("ok"):
-                all_succeeded = False
-                logger.error(f"unable to send Goitfy message to: {content.get('description')}")
         except Exception:
             logger.exception("error while send_gotify_message")
         else:
